@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rainbow Smoothies</title>
+    <style>
+      body {
+        background: linear-gradient(135deg, #ffe3cd 50%, #bbffff);
+      }
+      h1 {
+        text-align: center;
+        color: #ff8e8e;
+      }
+      h2 {
+        text-align: center;
+        border: 1px solid #ff8e8e;
+        padding: 15px;
+        font-size: 25px;
+        border-radius: 4px;
+        color: #5f9ea0;
+      }
+      h3 {
+        text-align: center;
+        color: darkgreen;
+      }
+      img {
+        display: block;
+        margin: auto;
+        max-width: 100%;
+        padding: 20px;
+        width: 400px;
+        border: 1px solid #ff8e8e;
+      }
+      p {
+        text-align: center;
+      }
+      button {
+        display: block;
+        margin: auto;
+        background-color: #ffcccc;
+        color: #e8ffff;
+        font-size: medium;
+        border: 1px solid #e8ffff;
+        border-radius: 6px;
+        padding: 10px 10px;
+        box-shadow: 5px 5px 5px rgba (0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.9;
+        cursor: pointer;
+      }
+      .inspire-more {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        text-decoration: none;
+        color: #ff8e8e;
+        font-size: 18px;
+        font-weight: 700;
+      }
+      .inspire-more:hover {
+        text-decoration: underline;
+      }
+      .pink {
+        color: #ffa5a5;
+      }
+      .coral {
+        color: #f09102dc;
+      }
+      .violet {
+        color: #9800ac;
+      }
+      .greenish {
+        color: #006400;
+      }
+      .ingredients {
+        color: rgb(226, 178, 115);
+      }
+      .protein {
+        color: brown;
+      }
+      .chia {
+        color: darkblue;
+      }
+      .recipe {
+        display: block;
+        line-height: 2.5;
+        text-align: justify;
+      }
+      .footer {
+        text-align: center;
+        display: block;
+        font-size: 18px;
+      }
+      .container {
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Collection of Rainbow Smoothies</h1>
+      <h2>🥭 Easy Home-made, Vegan & High protein 🍑</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/002/590/original/Smoothies.png?1600211528"
+        alt="Smoothies"
+      />
+      <h3>Mind-blowing drinks for #summervibes 🍀</h3>
+      <p>
+        Discover the wonder of colors through vegan/plant-based diets. Proudly
+        present home-made splashy collection of smoothies 😎
+      </p>
+      <ul>
+        <li class="pink">
+          <strong>Red Pink </strong> - Strawberry, Watermelon, Avocado 🍉
+        </li>
+        <li class="violet"><strong>Purple</strong> - Banana, Blueberry 🍒</li>
+        <li class="coral">
+          <strong>Yellow</strong> - Carrot, Organge, Pumpkin 🍊
+        </li>
+        <li class="greenish">
+          <strong>Green</strong> - Spinach, Banana, Avocado 🥑
+        </li>
+      </ul>
+      <p class="recipe">
+        Each color recipe is blended with
+        <span class="ingredients"
+          >300ml <em>Plant-based Milk</em> (almond, soy, oat, rice, coconut 🥥
+          )</span
+        >, <span class="protein">15gr of <em>Protein Powder</em></span
+        >,
+        <span class="chia">
+          and your favorite amount of <em>Chia Seeds</em>.</span
+        >
+      </p>
+      <a
+        href="https://www.instagram.com/veg.euphorianne/"
+        target="_blank"
+        class="inspire-more"
+      >
+        Get Inspired about Plant-based lifestyle 🤗
+      </a>
+      <br />
+      <button>Full recipes to your inbox 🙌</button>
+      <br />
+      <hr />
+      <p class="footer">
+        This page is built by
+        <a href="https://euphorianne.info/" target="_blank"> 🤩 Anne 😎 </a>
+      </p>
+    </div>
+    <script>
+      function getRecipe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let answer = prompt(
+          "Do you like picture of the rainbow smoothies collection?"
+        );
+        answer = answer.toLowerCase();
+        if (answer === "yes") {
+          alert(
+            "Thank you " +
+              name +
+              ", You will receive all recipes with a small gift shortly. Stay healthy and have a fantastic day 🙃 "
+          );
+        } else {
+          alert(
+            "Thank you " +
+              name +
+              ", You will receive all recipes shortly. Stay healthy and have a wonderful day🤩 "
+          );
+        }
+      }
+      let getRecipeButton = document.querySelector("button");
+      getRecipeButton.addEventListener("click", getRecipe);
+    </script>
+  </body>
+</html>
